@@ -65,16 +65,11 @@
   <div id="custom-cursor"></div>
   <div id="custom-cursor-dot"></div>
 
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fbf9f4]/90 backdrop-blur-md border-b editorial-border transition-all duration-300" id="site-header">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fbf9f4]/95 backdrop-blur-md border-b editorial-border transition-all duration-300" id="site-header">
     <div class="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-6">
-        <a class="font-anton text-2xl md:text-3xl tracking-wider text-on-surface uppercase hover:text-cobalt transition-colors" href="#">
-          JOURNEY
-        </a>
-        <span class="hidden lg:inline-block font-mono text-[11px] uppercase tracking-widest text-[#727783] border-l editorial-border pl-6">
-          Vol. 01 — Edition 2026
-        </span>
-      </div>
+      <a class="font-anton text-2xl md:text-3xl tracking-wider text-on-surface uppercase hover:text-cobalt transition-colors" href="#">
+        JOURNEY
+      </a>
       <nav class="flex items-center gap-6 md:gap-10">
         <a class="text-sm font-medium tracking-wide text-on-surface hover:text-cobalt transition-colors" href="#coastal-dispatch">Coast</a>
         <a class="text-sm font-medium tracking-wide text-on-surface hover:text-cobalt transition-colors" href="#stories-pin">Stories</a>
@@ -88,54 +83,29 @@
   </header>
 
   <main class="w-full relative overflow-hidden">
-    <section class="relative w-full h-[220vh]" id="hero-scroll-container">
-      <div class="sticky top-0 left-0 w-full h-screen overflow-hidden flex flex-col justify-between pt-24 pb-12 px-6 md:px-12 max-w-[1440px] mx-auto z-10" id="hero-pinned-stage">
+    <section class="relative w-full h-[200vh] bg-[#fbf9f4]" id="hero-scroll-container">
+      <div class="w-full h-screen overflow-hidden flex flex-col justify-center items-center px-6 md:px-12 max-w-[1440px] mx-auto relative z-10" id="hero-pinned-stage">
         <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img alt="Open coastal highway at sunset" class="w-full h-full object-cover object-center brightness-90 contrast-105 scale-100 transform gpu" id="hero-bg-img" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#fbf9f4] via-[#fbf9f4]/30 to-transparent"></div>
-          <div class="absolute inset-0 bg-radial-gradient from-transparent via-[#fbf9f4]/20 to-[#fbf9f4]/70"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#fbf9f4] via-[#fbf9f4]/35 to-transparent"></div>
+          <div class="absolute inset-0 bg-[#fbf9f4]/20"></div>
         </div>
 
-        <div class="relative z-10 flex justify-between items-start pt-6 border-t editorial-border">
-          <div class="font-mono text-[11px] uppercase tracking-widest text-[#1b1c19] flex items-center gap-3">
-            <span class="w-2 h-2 bg-cobalt inline-block"></span>
-            Dispatch 001 // California State Route 1
-          </div>
-          <div class="hidden sm:flex font-mono text-[11px] uppercase tracking-widest text-[#727783] gap-8">
-            <span>36.3151° N, 121.8885° W</span>
-            <span>Elev. 420 FT</span>
-          </div>
-        </div>
-
-        <div class="relative z-10 my-auto py-12 flex flex-col justify-center">
+        <div class="relative z-10 text-center max-w-5xl mx-auto flex flex-col items-center">
           <h1 class="font-anton text-7xl sm:text-9xl md:text-[140px] lg:text-[170px] uppercase leading-none tracking-tightest text-[#1062b8] select-none gpu" id="hero-main-title">
             <span class="masked-line"><span class="masked-word">TAKE</span></span>
             <span class="masked-line"><span class="masked-word">THE</span></span>
-            <br class="hidden sm:inline"/>
             <span class="masked-line"><span class="masked-word text-[#1b1c19]">LONG</span></span>
             <span class="masked-line"><span class="masked-word text-[#1b1c19]">WAY.</span></span>
           </h1>
-          <p class="mt-6 max-w-xl text-lg sm:text-xl font-normal text-[#1b1c19]/90 leading-relaxed font-sans" id="hero-subtitle">
+          <p class="mt-8 max-w-xl text-lg sm:text-xl font-normal text-[#1b1c19]/90 leading-relaxed font-sans" id="hero-subtitle">
             An independent editorial publication dedicated to the open road, forgotten roadside Americana, analog photography, and the quiet romance of driving with nowhere in particular to go.
           </p>
-        </div>
-
-        <div class="relative z-10 flex flex-col sm:flex-row justify-between items-end border-b editorial-border pb-6 gap-4">
-          <div class="font-mono text-xs text-[#727783] tracking-widest uppercase flex items-center gap-4">
-            <span class="text-cobalt font-semibold">01 / 11</span>
-            <span>Scroll down to accelerate</span>
-            <svg class="w-4 h-4 text-cobalt animate-bounce" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2"></path>
-            </svg>
-          </div>
-          <div class="font-mono text-[11px] uppercase tracking-widest text-[#1b1c19] bg-[#ffffff]/80 backdrop-blur-sm px-4 py-2 border editorial-border">
-            Issue 01 &mdash; Golden Hour Monograph
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="w-full bg-[#121311] text-[#fbf9f4] py-14 overflow-hidden border-y border-[#30312e]" id="interlude-1">
+    <section class="w-full bg-[#121311] text-[#fbf9f4] py-14 overflow-hidden border-y border-[#30312e] relative z-20" id="interlude-1">
       <div class="flex whitespace-nowrap will-change-transform" id="ticker-1">
         <div class="flex items-center gap-12 font-anton text-5xl md:text-7xl uppercase tracking-wider text-[#d0e0ff]/90">
           <span>ROAD</span> <span class="text-cobalt">&bull;</span>
@@ -164,87 +134,45 @@
       </div>
     </section>
 
-    <section class="relative w-full h-[280vh]" id="coastal-dispatch">
-      <div class="sticky top-0 left-0 w-full h-screen overflow-hidden flex items-center justify-center p-6 md:p-12 z-20" id="coastal-pinned-wrap">
+    <section class="relative w-full h-[240vh] bg-[#fbf9f4]" id="coastal-dispatch">
+      <div class="w-full h-screen overflow-hidden flex items-center justify-center p-6 md:p-12 relative z-10" id="coastal-pinned-wrap">
         <div class="relative w-full max-w-[1440px] h-[85vh] bg-[#f5f3ee] border editorial-border overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-sm">
-          <div class="lg:col-span-5 p-8 md:p-14 flex flex-col justify-between z-10 bg-[#f5f3ee]">
-            <div>
-              <div class="font-mono text-xs text-rust font-semibold uppercase tracking-widest mb-4">
-                Field Dispatch // No. 04
-              </div>
-              <h2 class="font-anton text-5xl sm:text-6xl md:text-7xl uppercase tracking-tight text-on-surface leading-tight mb-6">
-                The coast is <br/>
-                <span class="text-cobalt">still out there.</span>
-              </h2>
-              <p class="text-base sm:text-lg text-on-surface-variant font-normal leading-relaxed mb-6 font-sans">
-                Highway 1 clings to cliffs of decomposed granite 800 feet above the surf. Turn the radio dial past static into quiet. The Pacific is not a destination; it is an unblinking witness to every mile you chose not to measure.
-              </p>
-            </div>
-            <div class="border-t editorial-border pt-6 grid grid-cols-2 gap-4 font-mono text-xs">
-              <div>
-                <span class="text-[#727783] block uppercase tracking-wider text-[10px]">Location</span>
-                <span class="font-medium text-on-surface">Big Sur Coast</span>
-              </div>
-              <div>
-                <span class="text-[#727783] block uppercase tracking-wider text-[10px]">Odometer</span>
-                <span class="font-medium text-on-surface">1,482.4 MI</span>
-              </div>
-              <div>
-                <span class="text-[#727783] block uppercase tracking-wider text-[10px]">Asphalt Temp</span>
-                <span class="font-medium text-on-surface">78&deg;F // 3:40 PM</span>
-              </div>
-              <div>
-                <span class="text-[#727783] block uppercase tracking-wider text-[10px]">Camera Stock</span>
-                <span class="font-medium text-on-surface">Portra 400 (35mm)</span>
-              </div>
-            </div>
+          <div class="lg:col-span-5 p-8 md:p-14 flex flex-col justify-center z-10 bg-[#f5f3ee]">
+            <h2 class="font-anton text-5xl sm:text-6xl md:text-7xl uppercase tracking-tight text-on-surface leading-tight mb-8">
+              The coast is <br/>
+              <span class="text-cobalt">still out there.</span>
+            </h2>
+            <p class="text-base sm:text-lg text-on-surface-variant font-normal leading-relaxed font-sans max-w-md">
+              Highway 1 clings to cliffs of decomposed granite 800 feet above the surf. Turn the radio dial past static into quiet. The Pacific is not a destination; it is an unblinking witness to every mile you chose not to measure.
+            </p>
           </div>
 
           <div class="lg:col-span-7 relative h-full w-full overflow-hidden bg-[#121311]">
             <img alt="Big Sur Coastal Cliff Road" class="absolute inset-0 w-full h-full object-cover scale-100 gpu" id="coast-base-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"/>
-            <div class="absolute inset-0 bg-gradient-to-r from-[#121311]/40 via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#121311]/30 via-transparent to-transparent"></div>
             <div class="absolute inset-0 w-full h-full overflow-hidden clip-wipe-initial gpu" id="coastal-wipe-panel">
               <img alt="Dramatic ocean swell and sea spray" class="w-full h-full object-cover brightness-95 scale-110 gpu" id="coast-wipe-img" src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"/>
-              <div class="absolute bottom-8 right-8 bg-[#121311]/90 text-[#fbf9f4] p-6 max-w-sm backdrop-blur-md border border-[#30312e] z-30">
-                <div class="font-mono text-[10px] uppercase tracking-widest text-secondary-container mb-2">Photographic Plate 02-B</div>
-                <div class="font-anton text-2xl uppercase tracking-wide mb-2 text-white">Wave crest, Granite Point</div>
-                <div class="text-xs text-[#d0e0ff] leading-relaxed font-sans">
-                  Exposure 1/500s at f/5.6. Ocean spray catches the 4 PM slant. No turnouts for the next eight miles.
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="relative w-full h-[360vh]" id="stories-pin">
-      <div class="sticky top-0 left-0 w-full h-screen overflow-hidden flex flex-col justify-between py-12 px-6 md:px-12 z-20" id="horizontal-stage">
-        <div class="max-w-[1440px] w-full mx-auto flex justify-between items-baseline border-b editorial-border pb-6">
-          <div>
-            <span class="font-mono text-xs uppercase tracking-widest text-cobalt font-semibold block mb-1">Vol. 01 Curated Index</span>
-            <h2 class="font-anton text-4xl sm:text-5xl uppercase tracking-tight text-on-surface">
-              Stories worth taking <span class="text-cobalt">the long way for</span>
-            </h2>
-          </div>
-          <div class="hidden md:flex items-center gap-4 font-mono text-xs text-[#727783] uppercase tracking-widest">
-            <span>Scroll Down to Pan</span>
-            <div class="w-12 h-[1px] bg-[#1b1c19]/20"></div>
-            <span class="text-cobalt font-bold">04 Features</span>
-          </div>
+    <section class="relative w-full h-[320vh] bg-[#fbf9f4]" id="stories-pin">
+      <div class="w-full h-screen overflow-hidden flex flex-col justify-between py-12 px-6 md:px-12 relative z-10" id="horizontal-stage">
+        <div class="max-w-[1440px] w-full mx-auto border-b editorial-border pb-6">
+          <h2 class="font-anton text-4xl sm:text-6xl uppercase tracking-tight text-on-surface">
+            Stories worth taking <span class="text-cobalt">the long way for</span>
+          </h2>
         </div>
 
-        <div class="relative w-full overflow-visible my-auto py-6">
+        <div class="relative w-full overflow-visible my-auto py-4">
           <div class="flex gap-8 md:gap-14 w-max items-center pl-2 will-change-transform" id="horizontal-track">
-            <article class="w-[320px] sm:w-[440px] md:w-[540px] h-[520px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+            <article class="w-[320px] sm:w-[440px] md:w-[520px] h-[480px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+              <div class="relative w-full h-[300px] overflow-hidden mb-6 bg-[#eae8e3]">
+                <img alt="Old motel sign neon glow" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+              </div>
               <div>
-                <div class="relative w-full h-[280px] overflow-hidden mb-6 bg-[#eae8e3]">
-                  <img alt="Old motel sign neon glow" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-                  <span class="absolute top-4 left-4 bg-[#121311] text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1">
-                    Route 50 &bull; Nevada
-                  </span>
-                </div>
-                <div class="font-mono text-xs text-[#727783] uppercase tracking-wider mb-2">Dispatch 01 &bull; 280 Miles Across the Basin</div>
                 <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-3 hover:text-cobalt transition-colors">
                   The Loneliest Neon
                 </h3>
@@ -252,21 +180,13 @@
                   Two gas pumps and a flickering vacuum-tube motel sign between Austin and Ely. You drink stale drip coffee under fluorescent tubes while gravel settles outside.
                 </p>
               </div>
-              <div class="border-t editorial-border pt-4 flex justify-between items-center font-mono text-xs text-[#727783]">
-                <span>Read Time: 8 Min</span>
-                <span class="text-cobalt uppercase font-semibold">Explore Dispatch &rarr;</span>
-              </div>
             </article>
 
-            <article class="w-[320px] sm:w-[440px] md:w-[540px] h-[520px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+            <article class="w-[320px] sm:w-[440px] md:w-[520px] h-[480px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+              <div class="relative w-full h-[300px] overflow-hidden mb-6 bg-[#eae8e3]">
+                <img alt="Vintage sports car on red dirt road" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+              </div>
               <div>
-                <div class="relative w-full h-[280px] overflow-hidden mb-6 bg-[#eae8e3]">
-                  <img alt="Vintage sports car on red dirt road" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-                  <span class="absolute top-4 left-4 bg-rust text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1">
-                    State 128 &bull; Utah
-                  </span>
-                </div>
-                <div class="font-mono text-xs text-[#727783] uppercase tracking-wider mb-2">Dispatch 02 &bull; Colorado River Canyon</div>
                 <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-3 hover:text-rust transition-colors">
                   Red Rock &amp; Cast Iron
                 </h3>
@@ -274,21 +194,13 @@
                   A 1968 coupe running warm through sandstone canyons. The engine echo bounces off thousand-foot canyon walls like thunder rolling down a hallway.
                 </p>
               </div>
-              <div class="border-t editorial-border pt-4 flex justify-between items-center font-mono text-xs text-[#727783]">
-                <span>Read Time: 12 Min</span>
-                <span class="text-rust uppercase font-semibold">Explore Dispatch &rarr;</span>
-              </div>
             </article>
 
-            <article class="w-[320px] sm:w-[440px] md:w-[540px] h-[520px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+            <article class="w-[320px] sm:w-[440px] md:w-[520px] h-[480px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+              <div class="relative w-full h-[300px] overflow-hidden mb-6 bg-[#eae8e3]">
+                <img alt="Misty coastal pine forest" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+              </div>
               <div>
-                <div class="relative w-full h-[280px] overflow-hidden mb-6 bg-[#eae8e3]">
-                  <img alt="Misty coastal pine forest" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-                  <span class="absolute top-4 left-4 bg-cobalt text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1">
-                    Hwy 101 &bull; Oregon
-                  </span>
-                </div>
-                <div class="font-mono text-xs text-[#727783] uppercase tracking-wider mb-2">Dispatch 03 &bull; Sea Mist &amp; Douglas Fir</div>
                 <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-3 hover:text-cobalt transition-colors">
                   Where the Pines Touch Salt
                 </h3>
@@ -296,21 +208,13 @@
                   Wipers on low. The road smells of wet cedar needles and diesel. Cape Perpetua rises through the gloom like the spine of some ancient sea mammal.
                 </p>
               </div>
-              <div class="border-t editorial-border pt-4 flex justify-between items-center font-mono text-xs text-[#727783]">
-                <span>Read Time: 9 Min</span>
-                <span class="text-cobalt uppercase font-semibold">Explore Dispatch &rarr;</span>
-              </div>
             </article>
 
-            <article class="w-[320px] sm:w-[440px] md:w-[540px] h-[520px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+            <article class="w-[320px] sm:w-[440px] md:w-[520px] h-[480px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+              <div class="relative w-full h-[300px] overflow-hidden mb-6 bg-[#eae8e3]">
+                <img alt="Roadside diner counter with chrome stools" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+              </div>
               <div>
-                <div class="relative w-full h-[280px] overflow-hidden mb-6 bg-[#eae8e3]">
-                  <img alt="Roadside diner counter with chrome stools" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-                  <span class="absolute top-4 left-4 bg-[#121311] text-white font-mono text-[10px] uppercase tracking-widest px-3 py-1">
-                    Route 89A &bull; Arizona
-                  </span>
-                </div>
-                <div class="font-mono text-xs text-[#727783] uppercase tracking-wider mb-2">Dispatch 04 &bull; Switchback Descent</div>
                 <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-3 hover:text-cobalt transition-colors">
                   The Pit Stop Philosophy
                 </h3>
@@ -318,25 +222,13 @@
                   Stainless counter stools, a hand-lettered cherry pie board, and a waitress who remembers the logging trucks before the highway got paved in &rsquo;74.
                 </p>
               </div>
-              <div class="border-t editorial-border pt-4 flex justify-between items-center font-mono text-xs text-[#727783]">
-                <span>Read Time: 6 Min</span>
-                <span class="text-cobalt uppercase font-semibold">Explore Dispatch &rarr;</span>
-              </div>
             </article>
-          </div>
-        </div>
-
-        <div class="max-w-[1440px] w-full mx-auto flex justify-between items-center border-t editorial-border pt-4 font-mono text-[11px] text-[#727783]">
-          <div>CONTINUOUS TRACK &bull; SCENE 04</div>
-          <div class="flex items-center gap-2">
-            <span class="w-8 h-[2px] bg-cobalt inline-block"></span>
-            <span>END OF TRACK</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="w-full bg-rust text-[#fbf9f4] py-12 overflow-hidden border-y border-[#fe8357]/30" id="interlude-2">
+    <section class="w-full bg-rust text-[#fbf9f4] py-12 overflow-hidden border-y border-[#fe8357]/30 relative z-20" id="interlude-2">
       <div class="flex whitespace-nowrap will-change-transform" id="ticker-2">
         <div class="flex items-center gap-12 font-anton text-5xl md:text-7xl uppercase tracking-wider text-white">
           <span>PLACES</span> <span>/</span>
@@ -361,19 +253,12 @@
       </div>
     </section>
 
-    <section class="relative w-full h-[260vh]" id="road-perspective">
-      <div class="sticky top-0 left-0 w-full h-screen overflow-hidden flex flex-col justify-between p-6 md:p-12 bg-[#121311] text-[#fbf9f4] z-20" id="road-persp-wrap">
-        <div class="relative z-20 max-w-[1440px] w-full mx-auto flex justify-between items-center border-b border-[#30312e] pb-6">
-          <div>
-            <span class="font-mono text-xs uppercase tracking-widest text-secondary-container font-semibold block mb-1">Perspective Road Vanishing</span>
-            <h2 class="font-anton text-4xl sm:text-6xl uppercase tracking-tight text-white" id="persp-heading">
-              Somewhere between <span class="text-cobalt">here and there</span>
-            </h2>
-          </div>
-          <div class="font-mono text-xs text-[#727783] uppercase tracking-widest text-right">
-            <span>Vanishing Point 0&deg;</span>
-            <span class="block text-secondary-container">Highway Simulation</span>
-          </div>
+    <section class="relative w-full h-[240vh] bg-[#121311]" id="road-perspective">
+      <div class="w-full h-screen overflow-hidden flex flex-col justify-between p-6 md:p-12 text-[#fbf9f4] relative z-10" id="road-persp-wrap">
+        <div class="relative z-20 max-w-[1440px] w-full mx-auto border-b border-[#30312e] pb-6">
+          <h2 class="font-anton text-4xl sm:text-6xl uppercase tracking-tight text-white" id="persp-heading">
+            Somewhere between <span class="text-cobalt">here and there</span>
+          </h2>
         </div>
 
         <div class="relative w-full h-full flex items-center justify-center overflow-hidden z-10">
@@ -388,44 +273,28 @@
             <line stroke="#1062b8" stroke-opacity="0.2" stroke-width="1" x1="500" x2="1000" y1="360" y2="580"></line>
           </svg>
 
-          <div class="absolute top-[42%] left-[10%] md:left-[18%] w-64 md:w-80 bg-[#1b1c19] border border-[#30312e] p-5 shadow-2xl z-20 pointer-events-none transform gpu opacity-0" id="persp-card-left">
-            <span class="font-mono text-[10px] text-rust uppercase tracking-widest block mb-1">Approaching Waypoint</span>
+          <div class="absolute top-[42%] left-[10%] md:left-[18%] w-64 md:w-80 bg-[#1b1c19] border border-[#30312e] p-6 shadow-2xl z-20 pointer-events-none transform gpu opacity-0" id="persp-card-left">
             <div class="font-anton text-2xl uppercase text-white mb-2">Red Mesa Trading Post</div>
             <p class="text-xs text-[#a8c8ff] font-sans leading-relaxed">
               Cold spring water, cedar firewood bundles, and hand-woven blankets hanging from barbed wire fences.
             </p>
-            <div class="mt-3 font-mono text-[10px] text-[#727783] border-t border-[#30312e] pt-2">
-              Distance: 1.4 Miles Ahead
-            </div>
           </div>
 
-          <div class="absolute top-[48%] right-[10%] md:right-[18%] w-64 md:w-80 bg-[#1b1c19] border border-[#30312e] p-5 shadow-2xl z-20 pointer-events-none transform gpu opacity-0" id="persp-card-right">
-            <span class="font-mono text-[10px] text-cobalt uppercase tracking-widest block mb-1">Landmark Ahead</span>
+          <div class="absolute top-[48%] right-[10%] md:right-[18%] w-64 md:w-80 bg-[#1b1c19] border border-[#30312e] p-6 shadow-2xl z-20 pointer-events-none transform gpu opacity-0" id="persp-card-right">
             <div class="font-anton text-2xl uppercase text-white mb-2">Timberline Junction</div>
             <p class="text-xs text-[#a8c8ff] font-sans leading-relaxed">
               Where the asphalt gives way to packed gravel. Altitude 6,800 ft. Night temperatures drop forty degrees.
             </p>
-            <div class="mt-3 font-mono text-[10px] text-[#727783] border-t border-[#30312e] pt-2">
-              Distance: 3.8 Miles Ahead
-            </div>
           </div>
-        </div>
-
-        <div class="relative z-20 max-w-[1440px] w-full mx-auto flex justify-between items-center border-t border-[#30312e] pt-4 font-mono text-[11px] text-[#727783]">
-          <div>LONGITUDE ESCAPE // 118.2437&deg; W</div>
-          <div>SCENE 06 // PINNED PERSPECTIVE RUN</div>
         </div>
       </div>
     </section>
 
-    <section class="w-full py-24 px-6 md:px-12 max-w-[1440px] mx-auto" id="places">
+    <section class="w-full py-24 px-6 md:px-12 max-w-[1440px] mx-auto bg-[#fbf9f4] relative z-20" id="places">
       <div class="border-b editorial-border pb-8 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div>
-          <span class="font-mono text-xs uppercase tracking-widest text-cobalt font-semibold block mb-2">Destination Topographies</span>
-          <h2 class="font-anton text-5xl md:text-7xl uppercase tracking-tight text-on-surface">
-            Go somewhere <span class="text-cobalt">unfamiliar</span>
-          </h2>
-        </div>
+        <h2 class="font-anton text-5xl md:text-7xl uppercase tracking-tight text-on-surface">
+          Go somewhere <span class="text-cobalt">unfamiliar</span>
+        </h2>
         <p class="max-w-md text-base text-on-surface-variant font-sans leading-relaxed">
           Three selected corridors where road conditions invite you to put your phone in the glove box and let the miles pile up without explanation.
         </p>
@@ -433,267 +302,156 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
         <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6" id="places-grid">
-          <div class="place-card bg-white border editorial-border p-6 flex flex-col justify-between h-[420px] transition-all duration-300 hover:border-cobalt hover:shadow-lg group" data-route="coast">
-            <div>
-              <div class="font-mono text-[10px] text-[#727783] uppercase tracking-widest mb-4">Corridor 01</div>
-              <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-3 group-hover:text-cobalt transition-colors">
-                Pacific Coast
-              </h3>
-              <p class="text-sm text-on-surface-variant font-sans leading-relaxed mb-4">
-                From Morro Bay through Carmel. 90 miles of cliffside curves, ocean spray, and zero cellular service.
-              </p>
-            </div>
-            <div class="border-t editorial-border pt-4 font-mono text-[11px] text-[#727783] space-y-1">
-              <div>Length: 122 Miles</div>
-              <div>Best Light: 5:30 PM</div>
-              <div class="text-cobalt font-semibold pt-1">Active Waypoints: 8</div>
-            </div>
+          <div class="place-card bg-white border editorial-border p-8 flex flex-col justify-between h-[340px] transition-all duration-300 hover:border-cobalt hover:shadow-lg group" data-route="coast">
+            <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-4 group-hover:text-cobalt transition-colors">
+              Pacific Coast
+            </h3>
+            <p class="text-sm text-on-surface-variant font-sans leading-relaxed">
+              From Morro Bay through Carmel. 90 miles of cliffside curves, ocean spray, and zero cellular service.
+            </p>
           </div>
 
-          <div class="place-card bg-white border editorial-border p-6 flex flex-col justify-between h-[420px] transition-all duration-300 hover:border-rust hover:shadow-lg group" data-route="southwest">
-            <div>
-              <div class="font-mono text-[10px] text-[#727783] uppercase tracking-widest mb-4">Corridor 02</div>
-              <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-3 group-hover:text-rust transition-colors">
-                The Southwest
-              </h3>
-              <p class="text-sm text-on-surface-variant font-sans leading-relaxed mb-4">
-                Red dirt washes, juniper scrub, and two-lane blacktop that shimmers in the heat like standing water.
-              </p>
-            </div>
-            <div class="border-t editorial-border pt-4 font-mono text-[11px] text-[#727783] space-y-1">
-              <div>Length: 310 Miles</div>
-              <div>Best Light: 6:45 AM</div>
-              <div class="text-rust font-semibold pt-1">Active Waypoints: 14</div>
-            </div>
+          <div class="place-card bg-white border editorial-border p-8 flex flex-col justify-between h-[340px] transition-all duration-300 hover:border-rust hover:shadow-lg group" data-route="southwest">
+            <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-4 group-hover:text-rust transition-colors">
+              The Southwest
+            </h3>
+            <p class="text-sm text-on-surface-variant font-sans leading-relaxed">
+              Red dirt washes, juniper scrub, and two-lane blacktop that shimmers in the heat like standing water.
+            </p>
           </div>
 
-          <div class="place-card bg-white border editorial-border p-6 flex flex-col justify-between h-[420px] transition-all duration-300 hover:border-on-surface hover:shadow-lg group" data-route="backroads">
-            <div>
-              <div class="font-mono text-[10px] text-[#727783] uppercase tracking-widest mb-4">Corridor 03</div>
-              <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-3 group-hover:text-on-surface transition-colors">
-                The Backroads
-              </h3>
-              <p class="text-sm text-on-surface-variant font-sans leading-relaxed mb-4">
-                Old county roads where the center line disappeared forty years ago. Cattle guards and abandoned silos.
-              </p>
-            </div>
-            <div class="border-t editorial-border pt-4 font-mono text-[11px] text-[#727783] space-y-1">
-              <div>Length: 185 Miles</div>
-              <div>Best Light: High Noon</div>
-              <div class="text-on-surface font-semibold pt-1">Active Waypoints: 6</div>
-            </div>
+          <div class="place-card bg-white border editorial-border p-8 flex flex-col justify-between h-[340px] transition-all duration-300 hover:border-on-surface hover:shadow-lg group" data-route="backroads">
+            <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-4 group-hover:text-on-surface transition-colors">
+              The Backroads
+            </h3>
+            <p class="text-sm text-on-surface-variant font-sans leading-relaxed">
+              Old county roads where the center line disappeared forty years ago. Cattle guards and abandoned silos.
+            </p>
           </div>
         </div>
 
-        <div class="lg:col-span-4 bg-[#f0eee9] border editorial-border p-8 h-[420px] flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between font-mono text-xs uppercase tracking-widest text-[#727783] mb-4">
-              <span>Topography Vector</span>
-              <span id="route-indicator">Active: All Lines</span>
-            </div>
-            <svg class="w-full h-44 border editorial-border bg-[#fbf9f4]" viewbox="0 0 300 160">
-              <path d="M 10 140 Q 60 40 120 90 T 200 60 T 290 30" fill="none" id="route-line-1" stroke="#1062b8" stroke-dasharray="400" stroke-linecap="round" stroke-width="2.5"></path>
-              <path d="M 10 30 Q 90 120 180 80 T 290 130" fill="none" id="route-line-2" opacity="0.6" stroke="#a23e18" stroke-dasharray="400" stroke-linecap="round" stroke-width="2"></path>
-              <circle cx="120" cy="90" fill="#1062b8" r="4"></circle>
-              <circle cx="200" cy="60" fill="#1062b8" r="4"></circle>
-              <circle cx="180" cy="80" fill="#a23e18" r="4"></circle>
-            </svg>
-          </div>
-          <div class="font-mono text-xs text-[#727783] border-t editorial-border pt-4 flex justify-between items-center">
-            <span>Hover corridor cards to highlight</span>
-            <span class="w-2 h-2 rounded-full bg-cobalt inline-block animate-ping"></span>
-          </div>
+        <div class="lg:col-span-4 bg-[#f0eee9] border editorial-border p-8 h-[340px] flex flex-col justify-center">
+          <svg class="w-full h-52 border editorial-border bg-[#fbf9f4]" viewbox="0 0 300 160">
+            <path d="M 10 140 Q 60 40 120 90 T 200 60 T 290 30" fill="none" id="route-line-1" stroke="#1062b8" stroke-dasharray="400" stroke-linecap="round" stroke-width="2.5"></path>
+            <path d="M 10 30 Q 90 120 180 80 T 290 130" fill="none" id="route-line-2" opacity="0.6" stroke="#a23e18" stroke-dasharray="400" stroke-linecap="round" stroke-width="2"></path>
+            <circle cx="120" cy="90" fill="#1062b8" r="4"></circle>
+            <circle cx="200" cy="60" fill="#1062b8" r="4"></circle>
+            <circle cx="180" cy="80" fill="#a23e18" r="4"></circle>
+          </svg>
         </div>
       </div>
     </section>
 
-    <section class="w-full py-24 bg-[#1b1c19] text-[#fbf9f4] border-t border-[#30312e]" id="passenger-seat">
+    <section class="w-full py-24 bg-[#1b1c19] text-[#fbf9f4] border-t border-[#30312e] relative z-20" id="passenger-seat">
       <div class="max-w-[1440px] mx-auto px-6 md:px-12 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div>
-          <span class="font-mono text-xs uppercase tracking-widest text-secondary-container font-semibold block mb-2">Photo Essay Lookbook</span>
-          <h2 class="font-anton text-5xl md:text-7xl uppercase tracking-tight text-white">
-            Things seen from the <span class="text-cobalt">passenger seat</span>
-          </h2>
-        </div>
+        <h2 class="font-anton text-5xl md:text-7xl uppercase tracking-tight text-white">
+          Things seen from the <span class="text-cobalt">passenger seat</span>
+        </h2>
         <p class="max-w-md text-sm text-[#d0e0ff] font-sans leading-relaxed">
           Analog contact sheet. Scratches, dust, light leaks, and roadside stops captured on Medium Format &amp; 35mm film across five states.
         </p>
       </div>
 
-      <div class="w-full overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing pb-8" id="lookbook-scroll">
+      <div class="w-full overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing pb-12" id="lookbook-scroll">
         <div class="flex gap-8 px-6 md:px-12 w-max items-center">
           <div class="lookbook-item w-[300px] md:w-[380px] shrink-0 bg-[#242521] border border-[#30312e] p-4">
-            <div class="w-full h-[460px] overflow-hidden mb-4 bg-black">
+            <div class="w-full h-[460px] overflow-hidden bg-black">
               <img alt="Midnight neon diner window" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-            </div>
-            <div class="flex justify-between items-center font-mono text-[11px] text-[#727783]">
-              <span>Plate 01 // 01:14 AM</span>
-              <span class="text-white">Tri-X 400</span>
             </div>
           </div>
 
           <div class="lookbook-item w-[320px] md:w-[420px] shrink-0 bg-[#242521] border border-[#30312e] p-4">
-            <div class="w-full h-[460px] overflow-hidden mb-4 bg-black">
+            <div class="w-full h-[460px] overflow-hidden bg-black">
               <img alt="Desert gas station pump at dusk" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1527018607616-0526648e861c?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-            </div>
-            <div class="flex justify-between items-center font-mono text-[11px] text-[#727783]">
-              <span>Plate 02 // 07:42 PM</span>
-              <span class="text-secondary-container">Portra 800</span>
             </div>
           </div>
 
           <div class="lookbook-item w-[280px] md:w-[360px] shrink-0 bg-[#242521] border border-[#30312e] p-4">
-            <div class="w-full h-[460px] overflow-hidden mb-4 bg-black">
+            <div class="w-full h-[460px] overflow-hidden bg-black">
               <img alt="Old telephone poles along straight road" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-            </div>
-            <div class="flex justify-between items-center font-mono text-[11px] text-[#727783]">
-              <span>Plate 03 // 02:20 PM</span>
-              <span class="text-white">HP5 Plus</span>
             </div>
           </div>
 
           <div class="lookbook-item w-[320px] md:w-[440px] shrink-0 bg-[#242521] border border-[#30312e] p-4">
-            <div class="w-full h-[460px] overflow-hidden mb-4 bg-black">
+            <div class="w-full h-[460px] overflow-hidden bg-black">
               <img alt="Vintage car side mirror reflecting sunset" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-            </div>
-            <div class="flex justify-between items-center font-mono text-[11px] text-[#727783]">
-              <span>Plate 04 // 06:05 PM</span>
-              <span class="text-cobalt">Ektachrome 100</span>
             </div>
           </div>
 
           <div class="lookbook-item w-[300px] md:w-[380px] shrink-0 bg-[#242521] border border-[#30312e] p-4">
-            <div class="w-full h-[460px] overflow-hidden mb-4 bg-black">
+            <div class="w-full h-[460px] overflow-hidden bg-black">
               <img alt="Dusty roadside cafe sign" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
-            </div>
-            <div class="flex justify-between items-center font-mono text-[11px] text-[#727783]">
-              <span>Plate 05 // 11:30 AM</span>
-              <span class="text-white">Gold 200</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="max-w-[1440px] mx-auto px-6 md:px-12 mt-16 pt-12 border-t border-[#30312e]">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
-          <div>
-            <span class="font-mono text-xs uppercase tracking-widest text-secondary-container font-semibold block mb-1">Matter.js 2D Physics Interactive</span>
-            <h3 class="font-anton text-3xl uppercase tracking-wide text-white">
-              Roadside Collectibles <span class="text-cobalt">&amp; Motel Keytags</span>
-            </h3>
-          </div>
-          <p class="font-mono text-xs text-[#727783] uppercase tracking-widest">
-            Grab &amp; toss items &bull; 2D Rigid-Body Physics
-          </p>
-        </div>
+      <div class="max-w-[1440px] mx-auto px-6 md:px-12 mt-8 pt-8 border-t border-[#30312e]">
         <div id="physics-canvas-container">
           <canvas id="physics-canvas"></canvas>
         </div>
       </div>
     </section>
 
-    <section class="w-full py-24 px-6 md:px-12 max-w-[1440px] mx-auto" id="journal">
-      <div class="border-b editorial-border pb-8 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div>
-          <span class="font-mono text-xs uppercase tracking-widest text-rust font-semibold block mb-2">Reflective Essays</span>
-          <h2 class="font-anton text-5xl md:text-7xl uppercase tracking-tight text-on-surface">
-            From the <span class="text-cobalt">journal</span>
-          </h2>
-        </div>
-        <div class="font-mono text-xs text-[#727783] uppercase tracking-widest">
-          3 Essays &bull; Printed Monograph Issue 01
-        </div>
+    <section class="w-full py-24 px-6 md:px-12 max-w-[1440px] mx-auto bg-[#fbf9f4] relative z-20" id="journal">
+      <div class="border-b editorial-border pb-8 mb-16">
+        <h2 class="font-anton text-5xl md:text-7xl uppercase tracking-tight text-on-surface">
+          From the <span class="text-cobalt">journal</span>
+        </h2>
       </div>
 
       <div class="divide-y editorial-border border-b editorial-border">
         <article class="journal-row py-8 grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline hover:bg-[#f5f3ee] px-4 -mx-4 transition-colors">
-          <div class="md:col-span-2 font-mono text-xs text-[#727783]">
-            <span>01 // ESSAY</span>
-            <span class="block text-on-surface font-medium">May 2026</span>
-          </div>
-          <div class="md:col-span-6">
-            <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface hover:text-cobalt transition-colors mb-2">
+          <div class="md:col-span-4">
+            <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface hover:text-cobalt transition-colors">
               The road after midnight
             </h3>
+          </div>
+          <div class="md:col-span-8">
             <p class="text-base text-on-surface-variant font-sans leading-relaxed">
               When the high beams carve out eighty feet of highway at a time and every radio station fades into Mexican folk music or midnight preachers, driving ceases to be transit and becomes contemplation.
             </p>
           </div>
-          <div class="md:col-span-2 font-mono text-xs text-[#727783]">
-            <span>Reading Time</span>
-            <span class="block text-on-surface font-semibold">14 Minutes</span>
-          </div>
-          <div class="md:col-span-2 font-mono text-xs text-right">
-            <a class="text-cobalt hover:text-rust transition-colors uppercase font-semibold inline-flex items-center gap-1" href="#journal">
-              Read Online &rarr;
-            </a>
-          </div>
         </article>
 
         <article class="journal-row py-8 grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline hover:bg-[#f5f3ee] px-4 -mx-4 transition-colors">
-          <div class="md:col-span-2 font-mono text-xs text-[#727783]">
-            <span>02 // ESSAY</span>
-            <span class="block text-on-surface font-medium">April 2026</span>
-          </div>
-          <div class="md:col-span-6">
-            <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface hover:text-cobalt transition-colors mb-2">
+          <div class="md:col-span-4">
+            <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface hover:text-cobalt transition-colors">
               The cars we grew up with
             </h3>
+          </div>
+          <div class="md:col-span-8">
             <p class="text-base text-on-surface-variant font-sans leading-relaxed">
               Station wagons with rear-facing third rows, bench seats of split vinyl, crank windows that never quite rolled all the way up, and the heavy thud of steel doors that sounded like bank vaults closing.
             </p>
           </div>
-          <div class="md:col-span-2 font-mono text-xs text-[#727783]">
-            <span>Reading Time</span>
-            <span class="block text-on-surface font-semibold">11 Minutes</span>
-          </div>
-          <div class="md:col-span-2 font-mono text-xs text-right">
-            <a class="text-cobalt hover:text-rust transition-colors uppercase font-semibold inline-flex items-center gap-1" href="#journal">
-              Read Online &rarr;
-            </a>
-          </div>
         </article>
 
         <article class="journal-row py-8 grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline hover:bg-[#f5f3ee] px-4 -mx-4 transition-colors">
-          <div class="md:col-span-2 font-mono text-xs text-[#727783]">
-            <span>03 // ESSAY</span>
-            <span class="block text-on-surface font-medium">March 2026</span>
-          </div>
-          <div class="md:col-span-6">
-            <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface hover:text-cobalt transition-colors mb-2">
+          <div class="md:col-span-4">
+            <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface hover:text-cobalt transition-colors">
               Pull over here
             </h3>
+          </div>
+          <div class="md:col-span-8">
             <p class="text-base text-on-surface-variant font-sans leading-relaxed">
               The gravel pullout that wasn&rsquo;t on the map. The historical marker with bullet holes. The apple tree growing alone beside an irrigation canal with no house in sight for three miles.
             </p>
-          </div>
-          <div class="md:col-span-2 font-mono text-xs text-[#727783]">
-            <span>Reading Time</span>
-            <span class="block text-on-surface font-semibold">8 Minutes</span>
-          </div>
-          <div class="md:col-span-2 font-mono text-xs text-right">
-            <a class="text-cobalt hover:text-rust transition-colors uppercase font-semibold inline-flex items-center gap-1" href="#journal">
-              Read Online &rarr;
-            </a>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="relative w-full h-[220vh]" id="final-cinematic-wrap">
-      <div class="sticky top-0 left-0 w-full h-screen overflow-hidden flex flex-col justify-center items-center p-6 md:p-12 z-20" id="final-cinematic-stage">
+    <section class="relative w-full h-[200vh] bg-[#fbf9f4]" id="final-cinematic-wrap">
+      <div class="w-full h-screen overflow-hidden flex flex-col justify-center items-center p-6 md:p-12 relative z-10" id="final-cinematic-stage">
         <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img alt="Golden light rolling hills and empty road" class="w-full h-full object-cover scale-100 opacity-60 brightness-90 gpu" id="final-cinematic-bg" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"/>
-          <div class="absolute inset-0 bg-[#fbf9f4]/60 backdrop-blur-[2px]"></div>
+          <div class="absolute inset-0 bg-[#fbf9f4]/75"></div>
           <div class="progressive-blur-top"></div>
           <div class="progressive-blur-bottom"></div>
         </div>
 
         <div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center" id="final-content-box">
-          <div class="font-mono text-xs uppercase tracking-widest text-cobalt font-semibold mb-6 flex items-center gap-3">
-            <span class="w-2 h-2 bg-rust inline-block"></span>
-            Resolution // The End of the Pavement
-          </div>
           <h2 class="font-anton text-6xl sm:text-8xl md:text-9xl uppercase tracking-tight text-on-surface leading-none mb-8">
             Where will you <br/>
             <span class="text-cobalt">go next?</span>
