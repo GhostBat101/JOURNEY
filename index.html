@@ -83,25 +83,23 @@
   </header>
 
   <main class="w-full relative overflow-hidden">
-    <section class="relative w-full h-[200vh] bg-[#fbf9f4]" id="hero-scroll-container">
-      <div class="w-full h-screen overflow-hidden flex flex-col justify-center items-center px-6 md:px-12 max-w-[1440px] mx-auto relative z-10" id="hero-pinned-stage">
-        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <img alt="Open coastal highway at sunset" class="w-full h-full object-cover object-center brightness-90 contrast-105 scale-100 transform gpu" id="hero-bg-img" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-[#fbf9f4] via-[#fbf9f4]/35 to-transparent"></div>
-          <div class="absolute inset-0 bg-[#fbf9f4]/20"></div>
-        </div>
+    <section class="relative w-full h-screen overflow-hidden bg-[#fbf9f4] flex flex-col justify-center items-center px-6 md:px-12 z-10" id="hero-scroll-container">
+      <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none" id="hero-pinned-stage">
+        <img alt="Open coastal highway at sunset" class="w-full h-full object-cover object-center brightness-90 contrast-105 scale-100 transform gpu" id="hero-bg-img" src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#fbf9f4] via-[#fbf9f4]/35 to-transparent"></div>
+        <div class="absolute inset-0 bg-[#fbf9f4]/20"></div>
+      </div>
 
-        <div class="relative z-10 text-center max-w-5xl mx-auto flex flex-col items-center">
-          <h1 class="font-anton text-7xl sm:text-9xl md:text-[140px] lg:text-[170px] uppercase leading-none tracking-tightest text-[#1062b8] select-none gpu" id="hero-main-title">
-            <span class="masked-line"><span class="masked-word">TAKE</span></span>
-            <span class="masked-line"><span class="masked-word">THE</span></span>
-            <span class="masked-line"><span class="masked-word text-[#1b1c19]">LONG</span></span>
-            <span class="masked-line"><span class="masked-word text-[#1b1c19]">WAY.</span></span>
-          </h1>
-          <p class="mt-8 max-w-xl text-lg sm:text-xl font-normal text-[#1b1c19]/90 leading-relaxed font-sans" id="hero-subtitle">
-            An independent editorial publication dedicated to the open road, forgotten roadside Americana, analog photography, and the quiet romance of driving with nowhere in particular to go.
-          </p>
-        </div>
+      <div class="relative z-10 text-center max-w-5xl mx-auto flex flex-col items-center">
+        <h1 class="font-anton text-7xl sm:text-9xl md:text-[140px] lg:text-[170px] uppercase leading-none tracking-tightest text-[#1062b8] select-none gpu" id="hero-main-title">
+          <span class="masked-line"><span class="masked-word">TAKE</span></span>
+          <span class="masked-line"><span class="masked-word">THE</span></span>
+          <span class="masked-line"><span class="masked-word text-[#1b1c19]">LONG</span></span>
+          <span class="masked-line"><span class="masked-word text-[#1b1c19]">WAY.</span></span>
+        </h1>
+        <p class="mt-8 max-w-xl text-lg sm:text-xl font-normal text-[#1b1c19]/90 leading-relaxed font-sans" id="hero-subtitle">
+          An independent editorial publication dedicated to the open road, forgotten roadside Americana, analog photography, and the quiet romance of driving with nowhere in particular to go.
+        </p>
       </div>
     </section>
 
@@ -134,58 +132,55 @@
       </div>
     </section>
 
-    <section class="relative w-full h-[240vh] bg-[#fbf9f4]" id="coastal-dispatch">
-      <div class="w-full h-screen overflow-hidden flex items-center justify-center p-6 md:p-12 relative z-10" id="coastal-pinned-wrap">
-        <div class="relative w-full max-w-[1440px] h-[85vh] bg-[#f5f3ee] border editorial-border overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-sm">
-          <div class="lg:col-span-5 p-8 md:p-14 flex flex-col justify-center z-10 bg-[#f5f3ee]">
-            <h2 class="font-anton text-5xl sm:text-6xl md:text-7xl uppercase tracking-tight text-on-surface leading-tight mb-8">
-              The coast is <br/>
-              <span class="text-cobalt">still out there.</span>
-            </h2>
-            <p class="text-base sm:text-lg text-on-surface-variant font-normal leading-relaxed font-sans max-w-md">
-              Highway 1 clings to cliffs of decomposed granite 800 feet above the surf. Turn the radio dial past static into quiet. The Pacific is not a destination; it is an unblinking witness to every mile you chose not to measure.
-            </p>
-          </div>
+    <section class="relative w-full h-screen overflow-hidden bg-[#fbf9f4] flex items-center justify-center p-6 md:p-12 z-10" id="coastal-dispatch">
+      <div class="relative w-full max-w-[1440px] h-[85vh] bg-[#f5f3ee] border editorial-border overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-sm" id="coastal-pinned-wrap">
+        <div class="lg:col-span-5 p-8 md:p-14 flex flex-col justify-center z-10 bg-[#f5f3ee]">
+          <h2 class="font-anton text-5xl sm:text-6xl md:text-7xl uppercase tracking-tight text-on-surface leading-tight mb-8">
+            The coast is <br/>
+            <span class="text-cobalt">still out there.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-on-surface-variant font-normal leading-relaxed font-sans max-w-md">
+            Highway 1 clings to cliffs of decomposed granite 800 feet above the surf. Turn the radio dial past static into quiet. The Pacific is not a destination; it is an unblinking witness to every mile you chose not to measure.
+          </p>
+        </div>
 
-          <div class="lg:col-span-7 relative h-full w-full overflow-hidden bg-[#121311]">
-            <img alt="Big Sur Coastal Cliff Road" class="absolute inset-0 w-full h-full object-cover scale-100 gpu" id="coast-base-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"/>
-            <div class="absolute inset-0 bg-gradient-to-r from-[#121311]/30 via-transparent to-transparent"></div>
-            <div class="absolute inset-0 w-full h-full overflow-hidden clip-wipe-initial gpu" id="coastal-wipe-panel">
-              <img alt="Dramatic ocean swell and sea spray" class="w-full h-full object-cover brightness-95 scale-110 gpu" id="coast-wipe-img" src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"/>
-            </div>
+        <div class="lg:col-span-7 relative h-full w-full overflow-hidden bg-[#121311]">
+          <img alt="Big Sur Coastal Cliff Road" class="absolute inset-0 w-full h-full object-cover scale-100 gpu" id="coast-base-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"/>
+          <div class="absolute inset-0 bg-gradient-to-r from-[#121311]/30 via-transparent to-transparent"></div>
+          <div class="absolute inset-0 w-full h-full overflow-hidden clip-wipe-initial gpu" id="coastal-wipe-panel">
+            <img alt="Dramatic ocean swell and sea spray" class="w-full h-full object-cover brightness-95 scale-110 gpu" id="coast-wipe-img" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"/>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="relative w-full h-[320vh] bg-[#fbf9f4]" id="stories-pin">
-      <div class="w-full h-screen overflow-hidden flex flex-col justify-between py-12 px-6 md:px-12 relative z-10" id="horizontal-stage">
-        <div class="max-w-[1440px] w-full mx-auto border-b editorial-border pb-6">
-          <h2 class="font-anton text-4xl sm:text-6xl uppercase tracking-tight text-on-surface">
-            Stories worth taking <span class="text-cobalt">the long way for</span>
-          </h2>
-        </div>
+    <section class="relative w-full h-screen overflow-hidden bg-[#fbf9f4] flex flex-col justify-between py-12 px-6 md:px-12 z-10" id="stories-pin">
+      <div class="max-w-[1440px] w-full mx-auto border-b editorial-border pb-6" id="horizontal-stage">
+        <h2 class="font-anton text-4xl sm:text-6xl uppercase tracking-tight text-on-surface">
+          Stories worth taking <span class="text-cobalt">the long way for</span>
+        </h2>
+      </div>
 
-        <div class="relative w-full overflow-visible my-auto py-4">
-          <div class="flex gap-8 md:gap-14 w-max items-center pl-2 will-change-transform" id="horizontal-track">
-            <article class="w-[320px] sm:w-[440px] md:w-[520px] h-[480px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
-              <div class="relative w-full h-[300px] overflow-hidden mb-6 bg-[#eae8e3]">
-                <img alt="Old motel sign neon glow" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-              </div>
-              <div>
-                <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-3 hover:text-cobalt transition-colors">
-                  The Loneliest Neon
-                </h3>
-                <p class="text-sm text-on-surface-variant font-sans leading-relaxed line-clamp-3">
-                  Two gas pumps and a flickering vacuum-tube motel sign between Austin and Ely. You drink stale drip coffee under fluorescent tubes while gravel settles outside.
-                </p>
-              </div>
-            </article>
+      <div class="relative w-full overflow-visible my-auto py-4">
+        <div class="flex gap-8 md:gap-14 w-max items-center pl-2 will-change-transform" id="horizontal-track">
+          <article class="w-[320px] sm:w-[440px] md:w-[520px] h-[480px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+            <div class="relative w-full h-[300px] overflow-hidden mb-6 bg-[#eae8e3]">
+              <img alt="Old motel sign neon glow" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+            </div>
+            <div>
+              <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-3 hover:text-cobalt transition-colors">
+                The Loneliest Neon
+              </h3>
+              <p class="text-sm text-on-surface-variant font-sans leading-relaxed line-clamp-3">
+                Two gas pumps and a flickering vacuum-tube motel sign between Austin and Ely. You drink stale drip coffee under fluorescent tubes while gravel settles outside.
+              </p>
+            </div>
+          </article>
 
-            <article class="w-[320px] sm:w-[440px] md:w-[520px] h-[480px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
-              <div class="relative w-full h-[300px] overflow-hidden mb-6 bg-[#eae8e3]">
-                <img alt="Vintage sports car on red dirt road" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
-              </div>
+          <article class="w-[320px] sm:w-[440px] md:w-[520px] h-[480px] bg-white border editorial-border p-6 flex flex-col justify-between shrink-0 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+            <div class="relative w-full h-[300px] overflow-hidden mb-6 bg-[#eae8e3]">
+              <img alt="Vintage coupe on desert canyon highway" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+            </div>
               <div>
                 <h3 class="font-anton text-3xl uppercase tracking-wide text-on-surface mb-3 hover:text-rust transition-colors">
                   Red Rock &amp; Cast Iron
@@ -253,13 +248,12 @@
       </div>
     </section>
 
-    <section class="relative w-full h-[240vh] bg-[#121311]" id="road-perspective">
-      <div class="w-full h-screen overflow-hidden flex flex-col justify-between p-6 md:p-12 text-[#fbf9f4] relative z-10" id="road-persp-wrap">
-        <div class="relative z-20 max-w-[1440px] w-full mx-auto border-b border-[#30312e] pb-6">
-          <h2 class="font-anton text-4xl sm:text-6xl uppercase tracking-tight text-white" id="persp-heading">
-            Somewhere between <span class="text-cobalt">here and there</span>
-          </h2>
-        </div>
+    <section class="relative w-full h-screen overflow-hidden bg-[#121311] text-[#fbf9f4] flex flex-col justify-between p-6 md:p-12 z-10" id="road-perspective">
+      <div class="relative z-20 max-w-[1440px] w-full mx-auto border-b border-[#30312e] pb-6" id="road-persp-wrap">
+        <h2 class="font-anton text-4xl sm:text-6xl uppercase tracking-tight text-white" id="persp-heading">
+          Somewhere between <span class="text-cobalt">here and there</span>
+        </h2>
+      </div>
 
         <div class="relative w-full h-full flex items-center justify-center overflow-hidden z-10">
           <svg class="absolute inset-0 w-full h-full pointer-events-none" id="perspective-road-svg" preserveaspectratio="none" viewbox="0 0 1000 800">
@@ -362,7 +356,7 @@
 
           <div class="lookbook-item w-[320px] md:w-[420px] shrink-0 bg-[#242521] border border-[#30312e] p-4">
             <div class="w-full h-[460px] overflow-hidden bg-black">
-              <img alt="Desert gas station pump at dusk" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1527018607616-0526648e861c?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+              <img alt="Desert highway vanishing into distant horizon" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
             </div>
           </div>
 
@@ -442,14 +436,13 @@
       </div>
     </section>
 
-    <section class="relative w-full h-[200vh] bg-[#fbf9f4]" id="final-cinematic-wrap">
-      <div class="w-full h-screen overflow-hidden flex flex-col justify-center items-center p-6 md:p-12 relative z-10" id="final-cinematic-stage">
-        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <img alt="Golden light rolling hills and empty road" class="w-full h-full object-cover scale-100 opacity-60 brightness-90 gpu" id="final-cinematic-bg" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"/>
-          <div class="absolute inset-0 bg-[#fbf9f4]/75"></div>
-          <div class="progressive-blur-top"></div>
-          <div class="progressive-blur-bottom"></div>
-        </div>
+    <section class="relative w-full h-screen overflow-hidden bg-[#fbf9f4] flex flex-col justify-center items-center p-6 md:p-12 z-10" id="final-cinematic-wrap">
+      <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none" id="final-cinematic-stage">
+        <img alt="Golden light rolling hills and empty road" class="w-full h-full object-cover scale-100 opacity-60 brightness-90 gpu" id="final-cinematic-bg" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"/>
+        <div class="absolute inset-0 bg-[#fbf9f4]/75"></div>
+        <div class="progressive-blur-top"></div>
+        <div class="progressive-blur-bottom"></div>
+      </div>
 
         <div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center" id="final-content-box">
           <h2 class="font-anton text-6xl sm:text-8xl md:text-9xl uppercase tracking-tight text-on-surface leading-none mb-8">
