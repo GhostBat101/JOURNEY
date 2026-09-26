@@ -720,7 +720,7 @@ function initJournalAndOutro() {
   if (finalContentBox) {
     finalTimeline.fromTo(finalContentBox,
       { y: 60, opacity: 0.7 },
-      { y: -30, opacity: 1, ease: "none" },
+      { y: 10, opacity: 1, ease: "none" },
       0
     );
   }
