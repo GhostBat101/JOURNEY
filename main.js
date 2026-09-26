@@ -58,6 +58,13 @@ let physicsCanvas = null;
 let physicsEngine = null;
 let physicsRender = null;
 let physicsRunner = null;
+let physicsBodies = [];
+let physicsHasDropped = false;
+let tagBigSur = null;
+let tagLonePine = null;
+let stampRoute66 = null;
+let badgePacific = null;
+let dinerMatchbook = null;
 
 let journalSection = null;
 let journalRows = [];
@@ -314,18 +321,23 @@ function initCoastalDispatch() {
 function initHorizontalStories() {
   if (!storiesContainer || !horizontalStage || !horizontalTrack || isReducedMotion) return;
 
-  function calculateDistance() {
-    return Math.max(0, horizontalTrack.scrollWidth - window.innerWidth + 120);
+  function calculateTravel() {
+    return Math.max(0, horizontalTrack.scrollWidth - window.innerWidth + 80);
+  }
+
+  function calculateScrollEnd() {
+    const travel = calculateTravel();
+    return Math.max(window.innerHeight * 2, travel * 1.5);
   }
 
   gsap.to(horizontalTrack, {
-    x: () => -calculateDistance(),
+    x: () => -calculateTravel(),
     ease: "none",
     scrollTrigger: {
       trigger: storiesContainer,
       start: "top top",
-      end: () => "+=" + calculateDistance(),
-      scrub: 1,
+      end: () => "+=" + calculateScrollEnd(),
+      scrub: 1.2,
       pin: true,
       pinSpacing: true,
       anticipatePin: 1,
@@ -342,7 +354,7 @@ function initPerspectiveRoad() {
       strokeDashoffset: -200,
       repeat: -1,
       ease: "none",
-      duration: 1.2
+      duration: 1.0
     });
   }
 
@@ -350,7 +362,7 @@ function initPerspectiveRoad() {
     scrollTrigger: {
       trigger: roadPerspContainer,
       start: "top top",
-      end: "+=120%",
+      end: "+=140%",
       scrub: 1,
       pin: true,
       pinSpacing: true,
@@ -360,39 +372,39 @@ function initPerspectiveRoad() {
 
   if (perspCardLeft) {
     roadTimeline.fromTo(perspCardLeft,
-      { scale: 0.2, opacity: 0, x: -140, y: 160 },
-      { scale: 1.05, opacity: 1, x: 0, y: 0, ease: "power2.out" },
+      { scale: 0.7, opacity: 0, x: -100, y: 120 },
+      { scale: 1.0, opacity: 1, x: 0, y: 0, ease: "power2.out" },
       0.1
     );
     roadTimeline.to(perspCardLeft, {
-      scale: 1.3,
+      scale: 1.15,
       opacity: 0,
-      x: -180,
-      y: 70,
-      ease: "power2.in"
-    }, 0.5);
-  }
-
-  if (perspCardRight) {
-    roadTimeline.fromTo(perspCardRight,
-      { scale: 0.2, opacity: 0, x: 140, y: -140 },
-      { scale: 1.05, opacity: 1, x: 0, y: 0, ease: "power2.out" },
-      0.35
-    );
-    roadTimeline.to(perspCardRight, {
-      scale: 1.3,
-      opacity: 0,
-      x: 180,
-      y: -60,
+      x: -140,
+      y: 40,
       ease: "power2.in"
     }, 0.75);
   }
 
+  if (perspCardRight) {
+    roadTimeline.fromTo(perspCardRight,
+      { scale: 0.7, opacity: 0, x: 100, y: -100 },
+      { scale: 1.0, opacity: 1, x: 0, y: 0, ease: "power2.out" },
+      0.3
+    );
+    roadTimeline.to(perspCardRight, {
+      scale: 1.15,
+      opacity: 0,
+      x: 140,
+      y: -40,
+      ease: "power2.in"
+    }, 0.85);
+  }
+
   if (perspHeading) {
     roadTimeline.fromTo(perspHeading,
-      { scale: 0.94, y: 20 },
-      { scale: 1.06, y: -10, ease: "none" },
-      0.15
+      { scale: 0.95, y: 20 },
+      { scale: 1.05, y: -10, ease: "none" },
+      0.1
     );
   }
 }
@@ -479,6 +491,31 @@ function initLookbookDraggable() {
   });
 }
 
+function dropPhysicsBodies() {
+  if (!physicsContainer || physicsBodies.length === 0) return;
+  const width = physicsContainer.clientWidth || 1200;
+
+  Matter.Body.setPosition(tagBigSur, { x: width * 0.22, y: -40 });
+  Matter.Body.setVelocity(tagBigSur, { x: 0.8, y: 3.5 });
+  Matter.Body.setAngularVelocity(tagBigSur, 0.05);
+
+  Matter.Body.setPosition(tagLonePine, { x: width * 0.42, y: -90 });
+  Matter.Body.setVelocity(tagLonePine, { x: -0.5, y: 4.2 });
+  Matter.Body.setAngularVelocity(tagLonePine, -0.06);
+
+  Matter.Body.setPosition(stampRoute66, { x: width * 0.6, y: -50 });
+  Matter.Body.setVelocity(stampRoute66, { x: 0.9, y: 4.8 });
+  Matter.Body.setAngularVelocity(stampRoute66, 0.09);
+
+  Matter.Body.setPosition(badgePacific, { x: width * 0.78, y: -70 });
+  Matter.Body.setVelocity(badgePacific, { x: -0.7, y: 3.8 });
+  Matter.Body.setAngularVelocity(badgePacific, -0.04);
+
+  Matter.Body.setPosition(dinerMatchbook, { x: width * 0.5, y: -110 });
+  Matter.Body.setVelocity(dinerMatchbook, { x: 0.3, y: 5.2 });
+  Matter.Body.setAngularVelocity(dinerMatchbook, 0.07);
+}
+
 function initPhysicsSandbox() {
   if (!physicsContainer || !physicsCanvas || typeof Matter === "undefined") return;
 
@@ -493,7 +530,7 @@ function initPhysicsSandbox() {
   const Mouse = Matter.Mouse;
   const MouseConstraint = Matter.MouseConstraint;
 
-  physicsEngine = Engine.create({ gravity: { x: 0, y: 0.9, scale: 0.001 } });
+  physicsEngine = Engine.create({ gravity: { x: 0, y: 0.95, scale: 0.001 } });
   const world = physicsEngine.world;
 
   physicsRender = Render.create({
@@ -503,7 +540,7 @@ function initPhysicsSandbox() {
       width: width,
       height: height,
       wireframes: false,
-      background: "#242521",
+      background: "#181916",
       pixelRatio: Math.min(window.devicePixelRatio || 1, 2)
     }
   });
@@ -520,7 +557,7 @@ function initPhysicsSandbox() {
 
   Composite.add(world, [ground, leftWall, rightWall]);
 
-  const tagBigSur = Bodies.rectangle(width * 0.22, 60, 180, 50, {
+  tagBigSur = Bodies.rectangle(width * 0.22, -40, 180, 50, {
     chamfer: { radius: 10 },
     restitution: 0.45,
     friction: 0.3,
@@ -531,7 +568,7 @@ function initPhysicsSandbox() {
     }
   });
 
-  const tagLonePine = Bodies.rectangle(width * 0.42, 30, 200, 55, {
+  tagLonePine = Bodies.rectangle(width * 0.42, -90, 200, 55, {
     chamfer: { radius: 8 },
     restitution: 0.4,
     friction: 0.35,
@@ -542,7 +579,7 @@ function initPhysicsSandbox() {
     }
   });
 
-  const stampRoute66 = Bodies.circle(width * 0.6, 80, 42, {
+  stampRoute66 = Bodies.circle(width * 0.6, -50, 42, {
     restitution: 0.55,
     friction: 0.25,
     render: {
@@ -552,7 +589,7 @@ function initPhysicsSandbox() {
     }
   });
 
-  const badgePacific = Bodies.rectangle(width * 0.78, 40, 160, 52, {
+  badgePacific = Bodies.rectangle(width * 0.78, -70, 160, 52, {
     chamfer: { radius: 12 },
     restitution: 0.5,
     friction: 0.3,
@@ -563,7 +600,7 @@ function initPhysicsSandbox() {
     }
   });
 
-  const dinerMatchbook = Bodies.rectangle(width * 0.5, -40, 130, 70, {
+  dinerMatchbook = Bodies.rectangle(width * 0.5, -110, 130, 70, {
     chamfer: { radius: 4 },
     restitution: 0.35,
     friction: 0.4,
@@ -574,7 +611,8 @@ function initPhysicsSandbox() {
     }
   });
 
-  Composite.add(world, [tagBigSur, tagLonePine, stampRoute66, badgePacific, dinerMatchbook]);
+  physicsBodies = [tagBigSur, tagLonePine, stampRoute66, badgePacific, dinerMatchbook];
+  Composite.add(world, physicsBodies);
 
   const mouse = Mouse.create(physicsCanvas);
   const mouseConstraint = MouseConstraint.create(physicsEngine, {
@@ -598,7 +636,7 @@ function initPhysicsSandbox() {
     ctx.translate(tagBigSur.position.x, tagBigSur.position.y);
     ctx.rotate(tagBigSur.angle);
     ctx.fillStyle = "#ffffff";
-    ctx.fillText("BIG SUR // HWY 1", 0, 0);
+    ctx.fillText("BIG SUR - HWY 1", 0, 0);
     ctx.restore();
 
     ctx.save();
@@ -628,6 +666,17 @@ function initPhysicsSandbox() {
     ctx.fillStyle = "#1062b8";
     ctx.fillText("NEON DINER", 0, 0);
     ctx.restore();
+  });
+
+  ScrollTrigger.create({
+    trigger: "#passenger-seat",
+    start: "top 60%",
+    onEnter: () => {
+      if (!physicsHasDropped) {
+        physicsHasDropped = true;
+        dropPhysicsBodies();
+      }
+    }
   });
 }
 
