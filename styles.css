@@ -259,10 +259,6 @@ html.lenis, html.lenis body {
   transform-origin: 50% 100%;
 }
 
-.pin-spacer {
-  background-color: transparent !important;
-}
-
 @media (pointer: coarse) {
   #custom-cursor, #custom-cursor-dot {
     display: none !important;
