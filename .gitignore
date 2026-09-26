@@ -1,3 +1,6 @@
+# JOURNEY — Git VCS Ignore Manifest
+# Declares excluded paths and patterns; interfaces with Git VCS to prevent tracking local rules, skills, ref assets, and build artifacts.
+
 # Skills & Customizations
 .agents/skills/
 .agent/skills/
