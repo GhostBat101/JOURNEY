@@ -32,3 +32,6 @@ build/
 Thumbs.db
 *.log
 scratch/
+
+# Reference Materials
+ref/
