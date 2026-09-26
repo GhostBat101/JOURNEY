@@ -232,9 +232,9 @@ function initHeroChoreography() {
     scrollTrigger: {
       trigger: heroContainer,
       start: "top top",
-      end: "bottom top",
+      end: "+=80%",
       scrub: 1,
-      pin: heroStage,
+      pin: true,
       pinSpacing: true,
       anticipatePin: 1
     }
@@ -290,9 +290,9 @@ function initCoastalDispatch() {
     scrollTrigger: {
       trigger: coastalContainer,
       start: "top top",
-      end: "bottom top",
+      end: "+=100%",
       scrub: 1,
-      pin: coastalWrap,
+      pin: true,
       pinSpacing: true,
       anticipatePin: 1
     }
@@ -315,18 +315,18 @@ function initHorizontalStories() {
   if (!storiesContainer || !horizontalStage || !horizontalTrack || isReducedMotion) return;
 
   function calculateDistance() {
-    return -(horizontalTrack.scrollWidth - window.innerWidth + 120);
+    return Math.max(0, horizontalTrack.scrollWidth - window.innerWidth + 120);
   }
 
   gsap.to(horizontalTrack, {
-    x: calculateDistance,
+    x: () => -calculateDistance(),
     ease: "none",
     scrollTrigger: {
       trigger: storiesContainer,
       start: "top top",
-      end: "bottom top",
+      end: () => "+=" + calculateDistance(),
       scrub: 1,
-      pin: horizontalStage,
+      pin: true,
       pinSpacing: true,
       anticipatePin: 1,
       invalidateOnRefresh: true
@@ -350,9 +350,9 @@ function initPerspectiveRoad() {
     scrollTrigger: {
       trigger: roadPerspContainer,
       start: "top top",
-      end: "bottom top",
+      end: "+=120%",
       scrub: 1,
-      pin: roadPerspWrap,
+      pin: true,
       pinSpacing: true,
       anticipatePin: 1
     }
@@ -652,9 +652,9 @@ function initJournalAndOutro() {
     scrollTrigger: {
       trigger: finalWrap,
       start: "top top",
-      end: "bottom top",
+      end: "+=80%",
       scrub: 1,
-      pin: finalStage,
+      pin: true,
       pinSpacing: true,
       anticipatePin: 1
     }
@@ -703,6 +703,11 @@ function bootstrapApp() {
   initLookbookDraggable();
   initPhysicsSandbox();
   initJournalAndOutro();
+
+  ScrollTrigger.refresh();
+  window.addEventListener("load", () => {
+    ScrollTrigger.refresh();
+  });
 }
 
 window.addEventListener("DOMContentLoaded", bootstrapApp);
