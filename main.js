@@ -47,7 +47,6 @@ let placesSection = null;
 let placeCards = [];
 let routeLine1 = null;
 let routeLine2 = null;
-let routeIndicator = null;
 
 let lookbookScroll = null;
 let isDraggingLookbook = false;
@@ -102,7 +101,6 @@ function cacheDomElements() {
   placeCards = Array.from(document.querySelectorAll(".place-card"));
   routeLine1 = document.getElementById("route-line-1");
   routeLine2 = document.getElementById("route-line-2");
-  routeIndicator = document.getElementById("route-indicator");
 
   lookbookScroll = document.getElementById("lookbook-scroll");
 
@@ -123,13 +121,13 @@ function initLenis() {
   if (isReducedMotion) return;
 
   lenisInstance = new Lenis({
-    duration: 1.25,
+    duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     orientation: "vertical",
     gestureOrientation: "vertical",
     smoothWheel: true,
     wheelMultiplier: 1.0,
-    touchMultiplier: 1.8
+    touchMultiplier: 1.6
   });
 
   lenisInstance.on("scroll", ScrollTrigger.update);
@@ -184,8 +182,8 @@ function initFilmGrain() {
 function initCustomCursor() {
   if (!cursorEl || !cursorDotEl || window.matchMedia("(pointer: coarse)").matches) return;
 
-  quickCursorX = gsap.quickTo(cursorEl, "x", { duration: 0.22, ease: "power3.out" });
-  quickCursorY = gsap.quickTo(cursorEl, "y", { duration: 0.22, ease: "power3.out" });
+  quickCursorX = gsap.quickTo(cursorEl, "x", { duration: 0.2, ease: "power3.out" });
+  quickCursorY = gsap.quickTo(cursorEl, "y", { duration: 0.2, ease: "power3.out" });
   quickDotX = gsap.quickTo(cursorDotEl, "x", { duration: 0.04, ease: "none" });
   quickDotY = gsap.quickTo(cursorDotEl, "y", { duration: 0.04, ease: "none" });
 
@@ -236,22 +234,24 @@ function initHeroChoreography() {
       start: "top top",
       end: "bottom top",
       scrub: 1,
-      pin: heroStage
+      pin: heroStage,
+      pinSpacing: true,
+      anticipatePin: 1
     }
   });
 
   if (heroBgImg) {
-    heroTimeline.fromTo(heroBgImg, { scale: 1.0 }, { scale: 1.16, ease: "none" }, 0);
+    heroTimeline.fromTo(heroBgImg, { scale: 1.0 }, { scale: 1.18, ease: "none" }, 0);
   }
 
   const titleEl = document.getElementById("hero-main-title");
   if (titleEl) {
-    heroTimeline.fromTo(titleEl, { y: 0, opacity: 1 }, { y: -60, opacity: 0.12, ease: "none" }, 0);
+    heroTimeline.to(titleEl, { y: -80, opacity: 0, ease: "power1.in" }, 0.2);
   }
 
   const subtitleEl = document.getElementById("hero-subtitle");
   if (subtitleEl) {
-    heroTimeline.fromTo(subtitleEl, { y: 0, opacity: 1 }, { y: -40, opacity: 0, ease: "none" }, 0);
+    heroTimeline.to(subtitleEl, { y: -50, opacity: 0, ease: "power1.in" }, 0.15);
   }
 }
 
@@ -292,7 +292,9 @@ function initCoastalDispatch() {
       start: "top top",
       end: "bottom top",
       scrub: 1,
-      pin: coastalWrap
+      pin: coastalWrap,
+      pinSpacing: true,
+      anticipatePin: 1
     }
   });
 
@@ -325,6 +327,8 @@ function initHorizontalStories() {
       end: "bottom top",
       scrub: 1,
       pin: horizontalStage,
+      pinSpacing: true,
+      anticipatePin: 1,
       invalidateOnRefresh: true
     }
   });
@@ -348,7 +352,9 @@ function initPerspectiveRoad() {
       start: "top top",
       end: "bottom top",
       scrub: 1,
-      pin: roadPerspWrap
+      pin: roadPerspWrap,
+      pinSpacing: true,
+      anticipatePin: 1
     }
   });
 
@@ -384,8 +390,8 @@ function initPerspectiveRoad() {
 
   if (perspHeading) {
     roadTimeline.fromTo(perspHeading,
-      { scale: 0.92, y: 30 },
-      { scale: 1.08, y: -10, ease: "none" },
+      { scale: 0.94, y: 20 },
+      { scale: 1.06, y: -10, ease: "none" },
       0.15
     );
   }
@@ -427,9 +433,6 @@ function initTopographyMap() {
   placeCards.forEach((card) => {
     card.addEventListener("mouseenter", () => {
       const route = card.getAttribute("data-route");
-      const title = card.querySelector("h3") ? card.querySelector("h3").textContent.trim() : route;
-      if (routeIndicator) routeIndicator.textContent = `Route: ${title}`;
-
       if (route === "coast" && routeLine1) {
         routeLine1.setAttribute("stroke", "#1062b8");
         routeLine1.setAttribute("stroke-width", "4");
@@ -441,7 +444,6 @@ function initTopographyMap() {
     });
 
     card.addEventListener("mouseleave", () => {
-      if (routeIndicator) routeIndicator.textContent = "Active: All Lines";
       if (routeLine1) {
         routeLine1.setAttribute("stroke", "#1062b8");
         routeLine1.setAttribute("stroke-width", "2.5");
@@ -501,7 +503,7 @@ function initPhysicsSandbox() {
       width: width,
       height: height,
       wireframes: false,
-      background: "#f0eee9",
+      background: "#242521",
       pixelRatio: Math.min(window.devicePixelRatio || 1, 2)
     }
   });
@@ -632,15 +634,14 @@ function initPhysicsSandbox() {
 function initJournalAndOutro() {
   if (journalRows.length > 0) {
     gsap.from(journalRows, {
-      y: 45,
+      y: 40,
       opacity: 0,
-      stagger: 0.14,
-      duration: 0.85,
+      stagger: 0.12,
+      duration: 0.8,
       ease: "power2.out",
       scrollTrigger: {
         trigger: journalSection,
-        start: "top 75%",
-        toggleActions: "play reverse play reverse"
+        start: "top 80%"
       }
     });
   }
@@ -653,7 +654,9 @@ function initJournalAndOutro() {
       start: "top top",
       end: "bottom top",
       scrub: 1,
-      pin: finalStage
+      pin: finalStage,
+      pinSpacing: true,
+      anticipatePin: 1
     }
   });
 
